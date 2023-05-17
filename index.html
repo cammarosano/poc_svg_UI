@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG POC</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <svg version="1.1" width="1000" height="200" xmlns="http://www.w3.org/2000/svg">
+            <!-- rectangle -->
+            <rect class="shape" id="square_0" name="Red Square"
+                x="150" y="10" width="50" height="50" fill="red" />
+
+            <!-- circle -->
+            <circle class="shape" id="circle_0" name="Green Circle"
+                cx="175" cy="140" r="25" fill="green" />
+
+            <!-- heart -->
+            <path class="shape" id="heart" name ="Black Heart"
+                d="M 10,30
+                   A 20,20 0,0,1 50,30
+                   A 20,20 0,0,1 90,30
+                   Q 90,60 50,90
+                   Q 10,60 10,30 z" />
+
+            <!-- line connecting heart to square -->
+            <line id="heart2square_line"
+                x1="90" y1="40" x2="150" y2="40" stroke="black" stroke-width="5" />
+
+            <!-- line connecting square to circle -->
+            <line id="square2circle_line"
+                x1="175" y1="60" x2="175" y2="115" stroke="purple" stroke-width="5"/>
+        </svg>
+
+        <h3>List of enabled elements:</h3>
+        <div id="enabled_shapes"></div>
+    </body>
+</html>
